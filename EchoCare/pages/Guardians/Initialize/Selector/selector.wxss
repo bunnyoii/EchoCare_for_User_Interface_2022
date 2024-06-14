@@ -1,0 +1,70 @@
+/* pages/Guardians/Initialize/Selector/selector.wxss */
+/* pages/contactPicker/contactPicker.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 20px; /* 为整个容器添加左右内边距 */
+}
+
+.main-title {
+  font-size: 30px;
+  color: #9be8b9; /* 浅绿色 */
+  text-align: center;
+  margin-bottom: 30px;
+  display: block; /* 使每个 text 标签独占一行 */
+  white-space: normal; /* 允许文本换行 */
+}
+
+.sub-title {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.search-bar {
+  padding: 10px;
+  width: 300px;
+}
+
+.search-input {
+  height: 40px;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+}
+
+.contact-list {
+  flex: 1;
+  background-color: #fff;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.checkbox-group {
+  margin-right: 20px; /* 复选框和头像之间的间距 */
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 20px; /* 头像和名称之间的间距 */
+}
+
+.contact-name {
+  font-size: 16px;
+}
+
+.confirm-btn {
+  background-color: #1aad19;
+  color: white;
+  padding: 10px 0;
+  margin: 10px;
+}

@@ -62,5 +62,15 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+  goToGuardianPage: function() {
+    wx.navigateTo({
+      url: '/pages/Guardians/Initialize/Selector/selector'
+    })
+  },
+  goToPatientPage: function() {
+    wx.navigateTo({
+      url: '/pages/Patients/Initialize/Validate/validate'
+    })
+  },
 })

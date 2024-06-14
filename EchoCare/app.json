@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/Initialize/HomePage/homepage",
-    "pages/Initialize/Validate/validate"
+    "pages/Initialize/Validate/validate",
+    "pages/Guardians/Initialize/Selector/selector",
+    "pages/Patients/Initialize/Validate/validate",
+    "pages/Guardians/Initialize/Selector/selectorConfirm"
   ],
   "window": {
     "navigationBarTextStyle": "black",

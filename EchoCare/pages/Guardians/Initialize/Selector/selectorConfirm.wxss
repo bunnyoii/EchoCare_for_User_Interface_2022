@@ -1,0 +1,62 @@
+/* pages/Guardians/Initialize/Selector/selectorConfirm.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.header .title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.profile-section {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.confirm-btn, .cancel-btn {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.confirm-btn {
+  background-color: #4CAF50;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+}

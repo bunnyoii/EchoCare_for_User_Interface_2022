@@ -1,0 +1,24 @@
+<!--pages/Guardians/Initialize/Selector/selector.wxml-->
+<view class="container">
+  <view class="title-section">
+    <text class="main-title">监护人模式</text>
+    <text class="sub-title">请选择您的爱护对象</text>
+  </view>
+  <view class="search-bar">
+    <input class="search-input" type="text" placeholder="搜索" />
+  </view>
+  <scroll-view class="contact-list" scroll-y="true">
+  <block wx:for="{{contacts}}" wx:key="index">
+    <view class="contact-item">
+      <checkbox-group class="checkbox-group" bindchange="onCheckboxChange">
+        <label class="contact-label">
+          <checkbox value="{{item.id}}" checked="{{item.checked}}"></checkbox>
+          <image class="contact-avatar" src="{{item.avatar}}" />
+          <text class="contact-name">{{item.name}}</text>
+        </label>
+      </checkbox-group>
+    </view>
+  </block>
+</scroll-view>
+<button class="confirm-btn" bindtap="onConfirm">确认</button>
+</view>

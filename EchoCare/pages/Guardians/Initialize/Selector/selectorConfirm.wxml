@@ -1,0 +1,16 @@
+<!--pages/Guardians/Initialize/Selector/selectorConfirm.wxml-->
+<!-- pages/confirmPage/confirmPage.wxml -->
+<view class="container">
+    <view class="header">
+        <text class="title">监护人模式</text>
+    </view>
+    <view wx:for="{{selectedContacts}}" wx:key="name">
+        <image src="{{item.avatar}}" mode="aspectFit"></image>
+        <text>{{item.name}}</text>
+        <text class="subtitle">请选择你的爱护对象</text>
+    </view>
+    <view class="buttons">
+        <button class="confirm-btn" bindtap="onConfirm">确认</button>
+        <button class="cancel-btn" bindtap="onCancel">取消</button>
+    </view>
+</view>
