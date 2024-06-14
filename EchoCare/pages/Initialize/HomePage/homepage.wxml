@@ -1,0 +1,12 @@
+<view class="container" style="width: 750rpx; height: 1447rpx; display: flex; box-sizing: border-box">
+    <view class="header" style="width: 674rpx; height: 510rpx; display: block; box-sizing: border-box">
+        <text class="title">EchoCare</text>
+        <text class="sub-title">欢迎来到EchoCare</text>
+        <text class="description">请选择您的身份</text>
+    </view>
+    <view class="buttons">
+        <button class="button-guardian">监护人</button>
+        <button class="button-patient">患者</button>
+    </view>
+    <text class="footer">EchoCare，一款为阿尔兹海默症患者设计的小程序</text>
+</view>

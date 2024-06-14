@@ -1,0 +1,64 @@
+/* pages/HomePage/homepage.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  font-size: 25px;
+  color: #000000;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px; /* 设置字号为30像素 */
+  color: #F68E99; /* 设置颜色为红色 */
+  margin-bottom: 30px;
+  display: block; /* 使每个 text 标签独占一行 */
+  white-space: normal; /* 允许文本换行 */
+}
+
+.sub-title, .description {
+  text-align: center; /* 居中标题和描述 */
+  display: block; /* 使每个 text 标签独占一行 */
+  white-space: normal; /* 允许文本换行 */
+  margin-bottom: 10px;
+}
+
+.buttons {
+  width: 100%;
+}
+
+.button-guardian, .button-patient {
+  width: 90%;
+  height: 80px;
+  line-height: 50px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.button-guardian {
+  background-color: #9be8b9; /* Light green */
+  color:#000000
+}
+
+.button-patient {
+  background-color: #8cbcee; /* Light blue */
+  color:#000000
+}
+
+.footer {
+  font-size: 10px;
+  color: gray;
+  text-align: center;
+  margin-top: 10px;
+}
