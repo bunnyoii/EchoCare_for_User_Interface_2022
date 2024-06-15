@@ -1,0 +1,76 @@
+/* pages/Guardians/Safety Tracking/safetyTracking.wxss */
+.container {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px; /* 设置字号为30像素 */
+  color: #F68E99; /* 设置颜色为红色 */
+  margin-bottom: 30px;
+  display: block; /* 使每个 text 标签独占一行 */
+  white-space: normal; /* 允许文本换行 */
+}
+
+.header text {
+  display: block;
+  text-align: center;
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.picker {
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.picker-view {
+  color: #666;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  padding-left: 10px;
+}
+
+.search-button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+/* 调整字体大小和颜色 */
+.header text:first-child {
+  font-size: 18px;
+  color: #fa7298;
+  font-weight: bold;
+}
+
+.header text:last-child {
+  font-size: 14px;
+  color: #666;
+}
+

@@ -1,0 +1,12 @@
+<!-- pages/Patients/Confirm/confirm.wxml -->
+<view class="container">
+    <view class="header">
+        <view class="main-title">患者模式</view>
+    </view>
+    <view class="buttons">
+        <button bindtap="navigateToEmergency" class="button red">紧急联系</button>
+        <button bindtap="navigateToLocation" class="button green">位置标记</button>
+        <button bindtap="navigateToSchedule" class="button blue">日程提醒</button>
+        <button bindtap="navigateToImportant" class="button purple">重要信息</button>
+    </view>
+</view>

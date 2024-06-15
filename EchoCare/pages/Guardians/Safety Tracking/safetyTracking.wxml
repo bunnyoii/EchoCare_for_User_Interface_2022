@@ -1,0 +1,26 @@
+<!--pages/Guardians/Safety Tracking/safetyTracking.wxml-->
+<view class="container">
+    <view class="header">
+        <text class="title">安全追踪</text>
+        <text>请选择适合Amber的安全洁净区域</text>
+    </view>
+    <view class="form">
+        <picker mode="selector" class="picker" range="{{provinces}}" value="{{provinceIndex}}" bindchange="bindProvinceChange">
+            <view class="picker-view">{{province}}</view>
+        </picker>
+        <picker mode="selector" class="picker" range="{{cities[provinceIndex]}}" value="{{cityIndex}}" bindchange="bindCityChange">
+            <view class="picker-view">{{city}}</view>
+        </picker>
+        <picker mode="selector" class="picker" range="{{districts[provinceIndex][cityIndex]}}" value="{{districtIndex}}" bindchange="bindDistrictChange">
+            <view class="picker-view">{{district}}</view>
+        </picker>
+        <view class="search-bar">
+            <input class="search-input" type="text" placeholder="小区、医院、学校等"/>
+            <button class="search-button">🔍</button>
+        </view>
+    </view>
+</view>
+
+<map latitude="{{latitude}}" longitude="{{longitude}}" scale="14" style="width: 100%; height: 300px;">
+  <marker latitude="{{latitude}}" longitude="{{longitude}}" />
+</map>

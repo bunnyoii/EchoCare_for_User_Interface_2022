@@ -1,2 +1,11 @@
-<!--pages/Patients/Initialize/Validate/validate.wxml-->
-<text>pages/Patients/Initialize/Validate/validate.wxml</text>
+
+<!--<text>pages/Patients/Initialize/Validate/validate.wxml</text>-->
+<view class="top-bar">
+  <text class="mode-text">患者模式</text>
+</view>
+<view class="password-container">
+  <text class="password-input">请输入来自监护者的</text>
+  <text class="password-input">六位数字验证码：</text>
+  <input type="number" maxlength="6" placeholder="请输入六位数字验证码" value="{{ password }}" bindinput="inputPassword" />
+  <button bindtap="confirmPassword">确认</button>
+</view>

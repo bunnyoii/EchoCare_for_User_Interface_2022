@@ -1,4 +1,4 @@
-/* pages/Guardians/Initialize/Choose/chooseFunctions.wxss */
+/* pages/Patients/Confirm/confirm.wxss */
 .container {
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
 
 .main-title {
   font-size: 30px;
-  color: #9be8b9; /* 浅绿色 */
+  color: #007bff;
   text-align: center;
   margin-bottom: 30px;
   display: block; /* 使每个 text 标签独占一行 */

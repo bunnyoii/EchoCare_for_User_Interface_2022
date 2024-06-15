@@ -1,0 +1,27 @@
+<!--pages/Patients/Emergency Contact/emergencyContact.wxml-->
+
+<view class="container">
+  <!-- 循环显示所有联系人信息 -->
+  <view wx:for="{{ contacts }}" wx:key="index" class="info-group">
+    <!-- 拨打电话按钮 -->
+    <button class="call-btn" bindtap="callContact" data-index="{{ index }}">拨打{{ item.name }}电话</button>
+    <!-- 长按触发删除操作 -->
+    <view class="delete-btn" bindlongpress="longPressHandler" data-index="{{ index }}">长按删除</view>
+  </view>
+
+  <!-- 新建联系人按钮 -->
+  <button wx:if="{{ !showForm }}" bindtap="showFormInput">新建联系人</button>
+
+  <!-- 输入表单 -->
+  <view wx:if="{{ showForm }}" class="input-group">
+    <text>姓名：</text>
+    <input placeholder="请输入姓名" value="{{ newContactName }}" bindinput="inputName" />
+  </view>
+  <view wx:if="{{ showForm }}" class="input-group">
+    <text>电话：</text>
+    <input type="number" placeholder="请输入电话号码" value="{{ newContactPhone }}" bindinput="inputPhone" />
+  </view>
+  <view wx:if="{{ showForm }}" class="btn-group">
+    <button class="confirm-btn" bindtap="saveContact">确认</button>
+  </view>
+</view>

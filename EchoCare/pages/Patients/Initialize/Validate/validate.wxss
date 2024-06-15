@@ -1,1 +1,37 @@
-/* pages/Patients/Initialize/Validate/validate.wxss */
+/* pages/passwordInput/passwordInput.wxss */
+.top-bar {
+  color: #007bff; /* 白色字体 */
+  font-size: 36px; /* 字体大小 */
+  text-align: center; /* 文本居中 */
+  padding: 24px 0; /* 上下留白 */
+}
+.password-input {
+  color: #000000; /* 白色字体 */
+  font-size: 24px; /* 字体大小 */
+  text-align: center; /* 文本居中 */
+  padding: 0 0; /* 上下留白 */
+}
+.password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+input {
+  width: 60%;
+  margin-top: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  text-align: center; /* 居中显示输入内容 */
+}
+button {
+  margin-top: 40px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}

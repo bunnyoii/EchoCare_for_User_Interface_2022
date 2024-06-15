@@ -5,63 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userImage: '', // 头像图片路径
-    userName: 'Amber' // 用户名
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
+  onLoad: function(options) {
+    
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  goToSafetyTracking(){
+    wx.navigateTo({
+      url: '/pages/Guardians/Safety Tracking/safetyTracking'
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  goToHealthManagement(){
+    wx.navigateTo({
+      url: '/pages/Guardians/Safety Tracking/safetyTracking'
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
+  goToInteractiveCommunity(){
+    wx.navigateTo({
+      url: '/pages/Guardians/Safety Tracking/safetyTracking'
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
+  goToTelecare(){
+    wx.navigateTo({
+      url: '/pages/Guardians/Safety Tracking/safetyTracking'
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
 })
