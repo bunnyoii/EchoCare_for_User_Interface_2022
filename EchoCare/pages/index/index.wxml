@@ -21,9 +21,7 @@
       </block>
     </view>
     <view class="usermotto">
-  
     </view>
-  
     <button type="primary" style="position: relative; left: 2rpx; top: -454rpx" hover-class="default" size="default" bindtap="goToHomePage">登录</button>
   
     <text style="position: relative; left: 2rpx; top: 131rpx; color: gray; font-size: 10px;" class="application-tips">EchoCare，一款专为阿尔兹海默症患者设计的小程序</text>

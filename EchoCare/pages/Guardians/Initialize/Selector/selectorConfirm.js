@@ -20,7 +20,7 @@ Page({
     if (selectedContacts.length > 0) {
       const selectedContact = selectedContacts[0];  // 假设我们只处理第一个选中的联系人
       wx.navigateTo({
-        url: `/pages/Guardians/Initialize/Selector/selectorCertain?userName=${encodeURIComponent(selectedContact.name)}&userImage=${encodeURIComponent(selectedContact.avatar)}`
+        url: `/pages/Guardians/Initialize/Selector/selectorCertain?userName=${encodeURIComponent(selectedContact.name)}&userImage=${selectedContact.avatar}`
       });
     } else {
       wx.showToast({

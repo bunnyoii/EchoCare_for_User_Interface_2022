@@ -1,3 +1,4 @@
+<!--pages/Guardians/Initialize/Selector/selectorCertain.wxml-->
 <view class="container">
   <text class="main-title">监护人模式</text>
   <text>验证成功！</text>
@@ -7,3 +8,4 @@
   <image src="assets/hand-gesture.png" class="gesture"/>
   <image src="{{userImage}}" class="avatar"/>
 </view>
+<button type="primary" style="position: relative; left: -1rpx; top: 74rpx">确定</button>

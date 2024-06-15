@@ -42,7 +42,9 @@ Page({
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
-        })
+        }),
+        // 设置全局变量
+        getApp().globalData.userInfo = res.userInfo;
       }
     })
   },

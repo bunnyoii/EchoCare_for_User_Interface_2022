@@ -1,24 +1,33 @@
 // pages/Guardians/Initialize/Selector/selectorCertain.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    userName: '',
-    userImage: ''
+    userName: '',   // 用户名
+    userImage: ''   // 用户头像
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    if (options.userName && options.userImage) {
-      this.setData({
-        userName: decodeURIComponent(options.userName),
-        userImage: decodeURIComponent(options.userImage)
-      });
-    }
+    // 从导航参数中获取用户名和头像URL，并设置到data中
+    this.setData({
+      userName: options.userName,
+      userImage: options.userImage
+    });
+  },
+
+  onConfirm: function() {
+    console.log(options); // 打印查看传递过来的所有参数
+    // 确定按钮的逻辑处理
+    wx.navigateTo({
+      url: '/pages/home/home', // 假设点击确定后返回首页
+      fail: function(error) {
+        console.log("跳转失败:", error);  // 查看跳转失败的错误信息
+      }
+    });
   },
 
   /**
