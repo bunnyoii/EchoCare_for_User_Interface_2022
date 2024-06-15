@@ -7,7 +7,8 @@
     "pages/Guardians/Initialize/Selector/selector",
     "pages/Patients/Initialize/Validate/validate",
     "pages/Guardians/Initialize/Selector/selectorConfirm",
-    "pages/Guardians/Initialize/Selector/selectorCertain"
+    "pages/Guardians/Initialize/Selector/selectorCertain",
+    "pages/Guardians/Initialize/Choose/chooseFunctions"
   ],
   "window": {
     "navigationBarTextStyle": "black",

@@ -8,4 +8,4 @@
   <image src="assets/hand-gesture.png" class="gesture"/>
   <image src="{{userImage}}" class="avatar"/>
 </view>
-<button type="primary" style="position: relative; left: -1rpx; top: 74rpx">确定</button>
+<button bindtap="onConfirm" type="primary" style="position: relative; left: -1rpx; top: 74rpx">确定</button>

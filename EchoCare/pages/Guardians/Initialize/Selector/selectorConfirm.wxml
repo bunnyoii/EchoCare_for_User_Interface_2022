@@ -10,6 +10,6 @@
     </view>
     <view class="buttons">
         <button class="confirm-btn" bindtap="onConfirm" style="position: relative; left: 168rpx; top: 349rpx">确认</button>
-        <button class="cancel-btn" bindtap="onCancel" style="position: relative; left: -170rpx; top: 516rpx">取消</button>
+        <button bindtap="onCancel" class="cancel-btn" bindtap="onCancel" style="position: relative; left: -170rpx; top: 516rpx">取消</button>
     </view>
 </view>
