@@ -1,0 +1,9 @@
+<view class="container">
+  <text class="main-title">监护人模式</text>
+  <text>验证成功！</text>
+  <text>接下来的日子</text>
+  <text>要时刻关爱{{userName}}噢！</text>
+  <image src="assets/avatar.jpg" class="avatar"/>
+  <image src="assets/hand-gesture.png" class="gesture"/>
+  <image src="{{userImage}}" class="avatar"/>
+</view>

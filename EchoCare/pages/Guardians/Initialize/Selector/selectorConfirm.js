@@ -16,14 +16,28 @@ Page({
     selectedContacts: []
   },
   onConfirm: function() {
-    // 确认按钮的逻辑处理
-    console.log('确认选中');
+    const selectedContacts = this.data.selectedContacts;
+    if (selectedContacts.length > 0) {
+      const selectedContact = selectedContacts[0];  // 假设我们只处理第一个选中的联系人
+      wx.navigateTo({
+        url: `/pages/Guardians/Initialize/Selector/selectorCertain?userName=${encodeURIComponent(selectedContact.name)}&userImage=${encodeURIComponent(selectedContact.avatar)}`
+      });
+    } else {
+      wx.showToast({
+        title: '没有选中任何联系人',
+        icon: 'none',
+        duration: 2000
+      });
+    }
   },
+  
   onCancel: function() {
     // 取消按钮的逻辑处理
     console.log('取消操作');
+    wx.navigateTo({
+    url: `/pages/Guardians/Initialize/Selector/selector`
+    });
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

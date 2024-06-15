@@ -2,40 +2,43 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   height: 100%;
   padding: 20px;
   background-color: #fff;
-}
-
-.header .title {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.profile-section {
-  width: 100%;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.profile-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
+.main-title {
+  font-size: 30px;
+  color: #9be8b9; /* 浅绿色 */
+  text-align: center;
+  margin-bottom: 30px;
+  display: block; /* 使每个 text 标签独占一行 */
+  white-space: normal; /* 允许文本换行 */
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   margin-bottom: 10px;
 }
 
-.profile-name {
-  font-size: 18px;
-  font-weight: bold;
+.profile-section {
+  display: flex; /* 或者不设定此项，因为默认为 block 已经是垂直布局 */
+  flex-direction: column; /* 确保子项垂直排列 */
+  align-items: center; /* 子项居中对齐 */
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px; /* 根据需要调整间距 */
 }
 
-.subtitle {
-  font-size: 14px;
-  color: #666;
+.name, .subtitle {
+  width: 100%; /* 宽度调整为100%，确保占满一整行 */
+  text-align: center; /* 文本居中 */
+  margin-top: 10px; /* 顶部间隔，可以根据需要调整 */
 }
 
 .buttons {
