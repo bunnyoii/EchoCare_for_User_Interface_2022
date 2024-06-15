@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userImage: '', // 头像图片路径
+    userName: 'Amber' // 用户名
   },
 
   /**

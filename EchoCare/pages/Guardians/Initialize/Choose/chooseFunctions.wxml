@@ -1,2 +1,14 @@
 <!--pages/Guardians/Initialize/Choose/chooseFunctions.wxml-->
-<text>pages/Guardians/Initialize/Choose/chooseFunctions.wxml</text>
+<view class="container">
+    <view class="header">
+        <view class="title">监护人模式</view>
+        <image class="user-avatar" src="{{userImage}}" />
+        <view class="user-name">{{userName}}</view>
+    </view>
+    <view class="buttons">
+        <button class="button red">安全通道验证</button>
+        <button class="button green">健康管理</button>
+        <button class="button blue">互动社区</button>
+        <button class="button purple">远程照明</button>
+    </view>
+</view>
