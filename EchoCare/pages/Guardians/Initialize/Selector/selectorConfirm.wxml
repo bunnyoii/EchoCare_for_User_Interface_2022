@@ -13,3 +13,5 @@
         <button bindtap="onCancel" class="cancel-btn" bindtap="onCancel" style="position: relative; left: -170rpx; top: 516rpx">取消</button>
     </view>
 </view>
+
+<text style="position: relative; left: 150rpx; top: 1049rpx; color: gray; font-size: 10px" class="application-tips">EchoCare，一款专为阿尔兹海默症患者设计的小程序</text>

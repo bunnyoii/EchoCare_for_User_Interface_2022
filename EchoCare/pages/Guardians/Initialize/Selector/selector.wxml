@@ -22,3 +22,5 @@
 </scroll-view>
 <button class="confirm-btn" bindtap="onConfirm">确认</button>
 </view>
+
+<text style="position: relative; left: 150rpx; top: -13rpx; color: gray; font-size: 10px" class="application-tips">EchoCare，一款专为阿尔兹海默症患者设计的小程序</text>

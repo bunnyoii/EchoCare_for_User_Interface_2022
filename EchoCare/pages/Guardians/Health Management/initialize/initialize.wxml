@@ -1,0 +1,11 @@
+<!--pages/Guardians/Health Management/initialize/initialize.wxml-->
+<view class="container">
+    <view class="header">
+        <view class="main-title">健康管理</view>
+    </view>
+    <view class="buttons">
+        <button bindtap="goToPhysicalConditionEnquiry" class="button red">身体状况查询</button>
+        <button bindtap="goToHealthReminder" class="button blue">健康提醒</button>
+    </view>
+</view>
+<text style="position: relative; left: 150rpx; top: 487rpx; color: gray; font-size: 10px" class="application-tips">EchoCare，一款专为阿尔兹海默症患者设计的小程序</text>

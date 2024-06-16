@@ -21,6 +21,8 @@
     </view>
 </view>
 
-<map latitude="{{latitude}}" longitude="{{longitude}}" scale="14" style="width: 100%; height: 300px;">
+<text style="position: relative; left: 150rpx; top: 776rpx; color: gray; font-size: 10px" class="application-tips">EchoCare，一款专为阿尔兹海默症患者设计的小程序</text>
+
+<map latitude="{{latitude}}" longitude="{{longitude}}" scale="14" style="width: 100%; height: 300px; position: relative; left: 0rpx; top: 0rpx">
   <marker latitude="{{latitude}}" longitude="{{longitude}}" />
 </map>

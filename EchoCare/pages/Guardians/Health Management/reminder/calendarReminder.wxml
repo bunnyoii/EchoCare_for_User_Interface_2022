@@ -1,0 +1,30 @@
+<!--pages/Guardians/Health Management/reminder/calendarReminder.wxml-->
+<view class="container">
+  <view class="form-item">
+    <text>事件标题:</text>
+    <input class="input-large" type="text" placeholder="请输入事件标题" bindinput="inputChange" data-param="title" />
+  </view>
+  <view class="form-item">
+    <text>地点:</text>
+    <input class="input-large" type="text" placeholder="请输入地点" bindinput="inputChange" data-param="location" />
+  </view>
+  <view class="form-item">
+    <text>开始时间:</text>
+    <picker mode="date" value="{{startDate}}" start="2023-01-01" end="2030-12-31" bindchange="onStartChange">
+      <view class="picker-date">{{startDate}}</view>
+    </picker>
+    <picker mode="time" value="{{startTime}}" start="00:00" end="23:59" bindchange="onStartTimeChange">
+      <view class="picker-time">{{startTime}}</view>
+    </picker>
+  </view>
+  <view class="form-item">
+    <text>结束时间:</text>
+    <picker mode="date" value="{{endDate}}" start="2023-01-01" end="2030-12-31" bindchange="onEndChange">
+      <view class="picker-date">{{endDate}}</view>
+    </picker>
+    <picker mode="time" value="{{endTime}}" start="00:00" end="23:59" bindchange="onEndTimeChange">
+      <view class="picker-time">{{endTime}}</view>
+    </picker>
+  </view>
+  <button class="button-large" bindtap="addEvent">添加到日历</button>
+</view>

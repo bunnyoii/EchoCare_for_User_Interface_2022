@@ -1,0 +1,51 @@
+/* pages/Guardians/Health Management/initialize/initialize.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
+  font-size: 30px;
+  color: #9be8b9; /* 浅绿色 */
+  text-align: center;
+  margin-bottom: 30px;
+  display: block; /* 使每个 text 标签独占一行 */
+  white-space: normal; /* 允许文本换行 */
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.button {
+  width: 90%;
+  height: 80px;
+  line-height: 50px;
+  border-radius: 25px;
+  margin: 10px 0;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.red {
+  background-color: #f56c6c;
+}
+
+.blue {
+  background-color: #409eff;
+}

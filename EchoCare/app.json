@@ -11,7 +11,9 @@
     "pages/Guardians/Initialize/Choose/chooseFunctions",
     "pages/Guardians/Safety Tracking/safetyTracking",
     "pages/Patients/Emergency Contact/emergencyContact",
-    "pages/Patients/Confirm/confirm"
+    "pages/Patients/Confirm/confirm",
+    "pages/Guardians/Health Management/initialize/initialize",
+    "pages/Guardians/Health Management/reminder/calendarReminder"
   ],
   "window": {
     "navigationBarTextStyle": "black",

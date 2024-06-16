@@ -23,7 +23,7 @@ Page({
 
   goToHealthManagement(){
     wx.navigateTo({
-      url: '/pages/Guardians/Safety Tracking/safetyTracking'
+      url: '/pages/Guardians/Health Management/initialize/initialize'
     })
   },
 
@@ -37,5 +37,5 @@ Page({
     wx.navigateTo({
       url: '/pages/Guardians/Safety Tracking/safetyTracking'
     })
-  },
+  }
 })

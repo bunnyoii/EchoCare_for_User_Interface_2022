@@ -5,8 +5,10 @@
     </view>
     <view class="buttons">
         <button bindtap="goToSafetyTracking" class="button red">安全追踪</button>
-        <button bindtap="goToSafetyTracking" class="button green">健康管理</button>
+        <button bindtap="goToHealthManagement" class="button green">健康管理</button>
         <button bindtap="goToSafetyTracking" class="button blue">互动社区</button>
         <button bindtap="goToSafetyTracking" class="button purple">远程照护</button>
     </view>
 </view>
+
+<text style="position: relative; left: 150rpx; top: -37rpx; color: gray; font-size: 10px" class="application-tips">EchoCare，一款专为阿尔兹海默症患者设计的小程序</text>

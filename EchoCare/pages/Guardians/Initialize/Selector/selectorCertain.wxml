@@ -8,4 +8,7 @@
   <image src="assets/hand-gesture.png" class="gesture"/>
   <image src="{{userImage}}" class="avatar"/>
 </view>
+
 <button bindtap="onConfirm" type="primary" style="position: relative; left: -1rpx; top: 74rpx">确定</button>
+
+<text style="position: relative; left: 150rpx; top: 402rpx; color: gray; font-size: 10px" class="application-tips">EchoCare，一款专为阿尔兹海默症患者设计的小程序</text>
