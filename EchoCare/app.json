@@ -13,7 +13,8 @@
     "pages/Patients/Emergency Contact/emergencyContact",
     "pages/Patients/Confirm/confirm",
     "pages/Guardians/Health Management/initialize/initialize",
-    "pages/Guardians/Health Management/reminder/calendarReminder"
+    "pages/Guardians/Health Management/reminder/calendarReminder",
+    "pages/Guardians/Health Management/healthStatus/healthStatus"
   ],
   "window": {
     "navigationBarTextStyle": "black",

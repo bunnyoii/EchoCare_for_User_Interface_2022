@@ -1,38 +1,347 @@
 /* pages/Guardians/Health Management/reminder/calendarReminder.wxss */
-.container {
-  padding: 20px;
-  font-size: 16px; /* 调整整体字体大小 */
-}
-.form-item {
-  margin-bottom: 20px; /* 增加间距 */
-  display: flex;
-  align-items: center;
-}
-.form-item text {
-  width: 100px; /* 调整标签宽度 */
-  font-size: 18px; /* 调整标签字体大小 */
-}
-.input-large {
-  flex: 1;
-  height: 50px; /* 增加输入框高度 */
-  font-size: 16px; /* 调整输入框字体大小 */
-  padding: 0 10px;
-}
-.picker-date, .picker-time {
-  flex: 1;
-  height: 50px;
-  line-height: 50px; /* 增加行高以垂直居中 */
-  background-color: #f0f0f0;
-  text-align: center;
-  margin-left: 10px;
-  font-size: 16px; /* 调整选择器字体大小 */
-}
-.button-large {
-  width: 100%;
-  height: 50px;
-  background-color: #1aad19;
-  color: white;
-  font-size: 18px; /* 增加按钮字体大小 */
-  border-radius: 5px;
+/* 微信小程序 WXSS */
+.dot-gray {
+  background: #999;
 }
 
+.day-month {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #666;
+  opacity: 1;
+  text-align: center;
+  line-height: 1;
+  z-index: 1;
+}
+
+.day-item {
+  width: calc(100% / 7); 
+  text-align: center;   
+  padding: 15rpx;        
+  box-sizing: border-box; 
+  border-right: 1px solid #e0e0e0; 
+  background-color: #f9f9f9;    
+  display: inline-block; /* 确保元素能够在行内显示 */
+  vertical-align: top; /* 对齐到容器的顶部 */   
+}
+
+.day-item:last-child {
+  border-right: none;
+}
+
+.day-item text {
+  display: block; /* 使文本块级显示，确保中心对齐 */
+  min-height: 50rpx; /* 给定最小高度，避免null值时高度塌陷 */
+}
+
+.toggle {
+  position: relative;
+  padding: 10rpx 0;
+  margin: 10rpx 20rpx 0;
+  display: flex;
+  justify-content: center;
+}
+
+.toggle:before {
+  width: calc(50% - 30rpx);
+  border-top: solid 1px #EAEAEA;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-top: 2px dashed #ccc;
+}
+
+.toggle:after {
+  width: calc(50% - 30rpx);
+  border-top: solid 1px #EAEAEA;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  border-top: 2px dashed #ccc;
+}
+
+.task-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.avatar-box {
+  display: flex;
+}
+
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.avatar image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.title {
+  font-size: 30rpx;
+  color: #303133;
+  margin-bottom: 15rpx;
+}
+
+.date {
+  font-size: 26rpx;
+  color: #909193;
+}
+
+.date-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.center-text {
+  flex-grow: 1;  
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+
+.branch {
+  margin-right: 15rpx;
+}
+
+.mask {
+  transition-duration: 450ms;
+  transition-timing-function: ease-out;
+  position: fixed;
+  inset: 0px;
+  z-index: 10070;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.z-content {
+  z-index: 10075;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0px;
+}
+
+.z-modal {
+  width: 289px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.modal-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #606266;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.z-modal-content {
+  padding: 12px 25px 25px 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 15px;
+  color: #606266;
+}
+
+.line {
+  margin: 0px;
+  border-bottom: 1px solid rgb(214, 215, 217);
+  width: 100%;
+  transform: scaleY(0.5);
+}
+
+.modal-foot {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(96, 98, 102);
+}
+
+.cancel {
+  flex: 1;
+  display: flex;
+  flexDirection: row;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+.foot-line {
+  margin: 0px;
+  border-left: 1px solid rgb(214, 215, 217);
+  height: 48px;
+  transform: scaleX(0.5);
+}
+
+.confirm {
+  flex: 1;
+  display: flex;
+  flexDirection: row;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+.confirm text {
+  color: rgb(41, 121, 255);
+}
+
+.active-day {
+  background-color: #2979ff; 
+  color: #ffffff;          
+  border-radius: 50%;       
+}
+
+.date-week {
+  display: flex;
+  justify-content: space-around; 
+}
+
+.week-item {
+  flex: 1; 
+  text-align: center;           
+}
+
+.week-item text {
+  display: block; 
+}
+
+.icon {
+  width: 50rpx; 
+  height: 50rpx;
+  color: #000; 
+  position: absolute; 
+  top: 10rpx;  
+  right: 10rpx;
+  z-index: 100;
+}
+
+.icon-image {
+  width: 30rpx;    
+  height: 30rpx;   
+  display: block;  
+}
+
+.page-container {
+  position: relative;
+  height: 100%;
+}
+
+.add-button {
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #2979ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50rpx;
+  z-index: 100; /* 确保按钮在最上层 */
+}
+
+.modal {
+  position: fixed; /* 或者 'absolute' */
+  z-index: 1000; /* 高z-index确保模态框在顶层 */
+  top: 50%; /* Centering Example */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centering Example */
+  background-color: white; /* Color Example */
+  padding: 20px; /* Spacing Example */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for Pop Effect */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.inputTitle{
+  width: 100%;
+  height: 100%;
+}
+
+.delete-button {
+  z-index: 10; /* 低z-index确保按钮不会覆盖模态框 */
+  position: relative; /* Positioning context for z-index */
+  margin-left: 10px;
+  color: red;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.task-list {
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.task-item {
+  padding: 8px;
+  margin-bottom: 5px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

@@ -17,7 +17,7 @@ Page({
 
   goToPhysicalConditionEnquiry(){
     wx.navigateTo({
-      url: '/pages/Guardians/Safety Tracking/safetyTracking'
+      url: '/pages/Guardians/Health Management/healthStatus/healthStatus'
     })
   },
 

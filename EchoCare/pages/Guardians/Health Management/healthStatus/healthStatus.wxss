@@ -1,0 +1,51 @@
+/* pages/Guardians/Health Management/healthStatus/healthStatus.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.header {
+  color: #9be8b9;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 90%;
+  height: 90%;
+  margin: 10rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+
+.date {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+}
+
+.footer {
+  color: #999;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}

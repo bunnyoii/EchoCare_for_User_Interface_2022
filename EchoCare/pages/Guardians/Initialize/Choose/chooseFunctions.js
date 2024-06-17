@@ -27,15 +27,9 @@ Page({
     })
   },
 
-  goToInteractiveCommunity(){
+  goToHelping(){
     wx.navigateTo({
-      url: '/pages/Guardians/Safety Tracking/safetyTracking'
-    })
-  },
-
-  goToTelecare(){
-    wx.navigateTo({
-      url: '/pages/Guardians/Safety Tracking/safetyTracking'
+      url: '/pages/Guardians/Helping/Helping'
     })
   }
 })

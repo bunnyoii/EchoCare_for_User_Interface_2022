@@ -1,30 +1,62 @@
 <!--pages/Guardians/Health Management/reminder/calendarReminder.wxml-->
-<view class="container">
-  <view class="form-item">
-    <text>事件标题:</text>
-    <input class="input-large" type="text" placeholder="请输入事件标题" bindinput="inputChange" data-param="title" />
+<view>
+  <view class="date-box">
+    <view class="box-list" style="margin-bottom:{{list.length > 0 ? '20rpx' : '0'}}">
+      <view class="date-top">
+        <view class="icon left-icon" bindtap="LastYear">
+          <image src="/pages/Guardians/Health Management/reminder/assets/doubleLeftArrow.png" class="icon-image" style="position: relative; left: -687rpx; top: 0rpx"></image>
+        </view>
+        <view class="center-text">
+          <view class="icon left-icon" bindtap="LastMonth" style="position: absolute; left: 672rpx; top: 695rpx">
+            <image src="/pages/Guardians/Health Management/reminder/assets/leftArrow.png" class="icon-image" style="position: relative; left: -624rpx; top: -685rpx"></image>
+          </view>
+          <text class="month">{{year}}年{{month}}月</text>
+          <view class="icon right-icon" bindtap="NextMonth" style="position: absolute; left: 518rpx; top: 162rpx">
+            <image src="/pages/Guardians/Health Management/reminder/assets/rightArrow.png" class="icon-image" style="position: relative; left: 150rpx; top: -150rpx"></image>
+          </view>
+        </view>
+        <view class="icon right-icon" bindtap="NextYear" style="position: absolute; left: 667rpx; top: 575rpx">
+          <image src="/pages/Guardians/Health Management/reminder/assets/doubleRightArrow.png" class="icon-image" style="position: relative; left: 50rpx; top: -564rpx"></image>
+        </view>
+      </view>
+      <view class="date-week">
+        <view class="week-item" wx:for="{{weekList}}" wx:key="item"><text>周{{item}}</text></view>
+      </view>
+      <view class="day-content">
+        <view class="day-item" wx:for="{{dayList}}" wx:key="index" bindtap="selectDate" data-day="{{item.day}}" data-month="{{month}}" data-year="{{year}}">
+          <text class="day-text {{item.day === day ? 'active-day' : ''}}">{{item.day}}</text>
+        </view>
+      </view>
+    </view>
   </view>
-  <view class="form-item">
-    <text>地点:</text>
-    <input class="input-large" type="text" placeholder="请输入地点" bindinput="inputChange" data-param="location" />
-  </view>
-  <view class="form-item">
-    <text>开始时间:</text>
-    <picker mode="date" value="{{startDate}}" start="2023-01-01" end="2030-12-31" bindchange="onStartChange">
-      <view class="picker-date">{{startDate}}</view>
-    </picker>
-    <picker mode="time" value="{{startTime}}" start="00:00" end="23:59" bindchange="onStartTimeChange">
-      <view class="picker-time">{{startTime}}</view>
-    </picker>
-  </view>
-  <view class="form-item">
-    <text>结束时间:</text>
-    <picker mode="date" value="{{endDate}}" start="2023-01-01" end="2030-12-31" bindchange="onEndChange">
-      <view class="picker-date">{{endDate}}</view>
-    </picker>
-    <picker mode="time" value="{{endTime}}" start="00:00" end="23:59" bindchange="onEndTimeChange">
-      <view class="picker-time">{{endTime}}</view>
-    </picker>
-  </view>
-  <button class="button-large" bindtap="addEvent">添加到日历</button>
 </view>
+
+<!-- 添加事项的浮动按钮 -->
+<view class="add-button" bindtap="showAddEventModal" style="width: 41rpx; height: 41rpx; display: block; box-sizing: border-box">
+  <text>+</text>
+</view>
+
+<!-- 模态框 -->
+<view wx:if="{{showModal}}" class="modal">
+  <!-- 模态框内容 -->
+  <view class="modal-content">
+    <view class="input-container">
+      <input class="inputTitle" placeholder="输入事项标题" value="{{newEventTitle}}" bindinput="inputEventTitle"/>
+    </view>
+    <view class="input-container">
+      <textarea placeholder="输入事项详情" value="{{newEventDetail}}" bindinput="inputEventDetail"></textarea>
+    </view>
+    <button bindtap="saveEvent">确定</button>
+    <button bindtap="hideModal">关闭</button>
+  </view>
+</view>
+
+<view class="task-list">
+  <view wx:for="{{tasks}}" wx:key="index" wx:for-item="task" wx:for-index="idx">
+    <view class="task-item">
+      <text>{{task.title}}: {{task.detail}}</text>
+      <button class="delete-button" bindtap="deleteTask" data-index="{{idx}}">删除</button>
+    </view>
+  </view>
+</view>
+

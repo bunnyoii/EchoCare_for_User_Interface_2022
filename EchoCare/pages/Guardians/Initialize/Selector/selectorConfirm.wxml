@@ -14,4 +14,4 @@
     </view>
 </view>
 
-<text style="position: relative; left: 150rpx; top: 1049rpx; color: gray; font-size: 10px" class="application-tips">EchoCare，一款专为阿尔兹海默症患者设计的小程序</text>
+<text style="position: relative; left: 150rpx; top: 518rpx; color: gray; font-size: 10px" class="application-tips">EchoCare，一款专为阿尔兹海默症患者设计的小程序</text>

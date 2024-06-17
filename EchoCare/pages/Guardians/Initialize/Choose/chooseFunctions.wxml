@@ -6,8 +6,7 @@
     <view class="buttons">
         <button bindtap="goToSafetyTracking" class="button red">安全追踪</button>
         <button bindtap="goToHealthManagement" class="button green">健康管理</button>
-        <button bindtap="goToSafetyTracking" class="button blue">互动社区</button>
-        <button bindtap="goToSafetyTracking" class="button purple">远程照护</button>
+        <button bindtap="goToHelping" class="button blue">帮助</button>
     </view>
 </view>
 

@@ -1,6 +1,16 @@
 // pages/Guardians/Safety Tracking/safetyTracking.js
 Page({
   data: {
+    // 切换导航栏
+    actionbarNumber: 1,
+    // 起点经纬度
+    startLatitude: '',
+    startLongitude: '',
+    // 起点
+    startAddress:'',
+    // 终点
+    destination: '',
+
     provinces: ["广东省", "上海市", "北京市"],
     provinceIndex: 0,
     cities: [
@@ -52,5 +62,57 @@ bindDistrictChange: function(e) {
 },
   onSearch: function() {
       // 执行搜索逻辑
-  }
+  },
+
+  	// 获取用户位置，但是只有经纬度，没有位置的名称
+    handleLoacation:function(){
+      locationUtil.getLocation().then(res => {
+          console.log("获取用户位置：",res);
+          var params = {lng:res.longitude,lat:res.latitude};
+          console.log(params.lng);
+      });
+  },
+  // 用户选择地图，可以获取到位置的经纬度和名称等信息
+  handleAddress:function(){
+      locationUtil.chooseLocation().then(res => {
+        console.log("选择的位置信息：",res);
+          var params = {lng:res.longitude,lat:res.latitude};
+          this.setData({
+              destination: res.name
+          })
+      });  
+  },
+
+      // 获取当前位置信息
+      getAddressName: function () {
+        var that = this
+        // 实例化腾讯地图API核心类
+        const qqmapsdk = new QQMapWX({
+          key: '开发密钥' // 必填
+        });
+        //1、获取当前位置坐标
+        wx.getLocation({
+          type: 'wgs84',
+          success: function (res) {
+              that.setData({
+                  	startLatitude: res.latitude,
+                 	startLongitude: res.longitude,
+              })
+            //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
+            qqmapsdk.reverseGeocoder({
+              location: {
+	               latitude: res.latitude,
+	               longitude: res.longitude
+              },
+              success: function (addressRes) {
+                var address = addressRes.result.formatted_addresses.recommend;
+                // 位置的名字
+                that.setData({
+                    startAddress: address
+                })
+              }
+            })
+          }
+        })
+    }
 });

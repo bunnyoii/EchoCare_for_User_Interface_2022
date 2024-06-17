@@ -17,3 +17,17 @@ const formatNumber = n => {
 module.exports = {
   formatTime
 }
+
+const showMsg = (msg, icon) => {
+  if (isBlank(icon)) {
+    icon = "none";
+  }
+  wx.showToast({
+    title: msg,
+    icon: icon,
+    duration: 2000
+  })
+}
+module.exports = {
+  showMsg: showMsg,
+}

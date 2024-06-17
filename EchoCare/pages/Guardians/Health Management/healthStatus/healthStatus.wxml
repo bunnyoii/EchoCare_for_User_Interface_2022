@@ -1,0 +1,20 @@
+<!--pages/Guardians/Health Management/healthStatus/healthStatus.wxml-->
+<view class="container">
+    <!-- 页面标题 -->
+    <view class="header">
+        身体健康指标分析
+    </view>
+
+    <!-- 卡片容器 -->
+    <view class="card-container">
+        <view class="card" style="width: 679rpx; height: 1100rpx; display: block; box-sizing: border-box">
+            <text class="date">{{currentDate}}</text>
+            <image style="width: 641rpx; height: 1000rpx; display: inline-block; box-sizing: border-box" src="/pages/Guardians/Health Management/healthStatus/healthStatus.png" mode="aspectFit" />
+        </view>
+    </view>
+
+    <!-- 底部信息 -->
+    <view class="footer">
+        EchoCare, 一款专为高效健康数据管理设计的小程序
+    </view>
+</view>
