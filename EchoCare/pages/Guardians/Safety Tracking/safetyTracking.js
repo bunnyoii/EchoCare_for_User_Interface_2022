@@ -1,16 +1,13 @@
 // pages/Guardians/Safety Tracking/safetyTracking.js
 Page({
   data: {
-    // 切换导航栏
     actionbarNumber: 1,
-    // 起点经纬度
     startLatitude: '',
     startLongitude: '',
-    // 起点
     startAddress:'',
-    // 终点
     destination: '',
-
+    latitude: '',
+    longitude: '',
     provinces: ["广东省", "上海市", "北京市"],
     provinceIndex: 0,
     cities: [
@@ -24,14 +21,13 @@ Page({
         [['黄浦区', '徐汇区', '长宁区', '静安区', '普陀区', '虹口区', '杨浦区', '浦东新区', '闵行区', '宝山区', '嘉定区', '金山区', '松江区', '青浦区', '奉贤区', '崇明区']],
         [['东城区', '西城区', '朝阳区', '海淀区', '丰台区', '石景山区', '门头沟区', '房山区', '通州区', '顺义区', '昌平区', '大兴区', '怀柔区', '平谷区', '密云区', '延庆区']]
     ],
-    districtIndex: 0
-},
+    districtIndex: 0,
+    inputLocation: ''
+  },
   onLoad: function() {
-    // 页面加载时设置默认值
     this.updatePickerView();
   },
   updatePickerView: function() {
-    // 更新显示，确保与picker的初始索引值对应
     const { provinces, cities, districts, provinceIndex, cityIndex, districtIndex } = this.data;
     this.setData({
         province: provinces[provinceIndex],
@@ -47,72 +43,91 @@ Page({
     });
     this.updatePickerView();
   },
-bindCityChange: function(e) {
+  bindCityChange: function(e) {
     this.setData({
         cityIndex: e.detail.value,
         districtIndex: 0
     });
     this.updatePickerView();
-},
-bindDistrictChange: function(e) {
+  },
+  bindDistrictChange: function(e) {
     this.setData({
         districtIndex: e.detail.value
     });
     this.updatePickerView();
-},
+  },
+  onInputChange: function(e) {
+    this.setData({
+      inputLocation: e.detail.value
+    });
+  },
   onSearch: function() {
-      // 执行搜索逻辑
+    const { province, city, district, inputLocation } = this.data;
+    const locationQuery = `${province} ${city} ${district} ${inputLocation}`;
+    this.getFuzzyLocation(locationQuery);
   },
-
-  	// 获取用户位置，但是只有经纬度，没有位置的名称
-    handleLoacation:function(){
-      locationUtil.getLocation().then(res => {
-          console.log("获取用户位置：",res);
-          var params = {lng:res.longitude,lat:res.latitude};
-          console.log(params.lng);
-      });
-  },
-  // 用户选择地图，可以获取到位置的经纬度和名称等信息
-  handleAddress:function(){
-      locationUtil.chooseLocation().then(res => {
-        console.log("选择的位置信息：",res);
-          var params = {lng:res.longitude,lat:res.latitude};
-          this.setData({
-              destination: res.name
-          })
-      });  
-  },
-
-      // 获取当前位置信息
-      getAddressName: function () {
-        var that = this
-        // 实例化腾讯地图API核心类
-        const qqmapsdk = new QQMapWX({
-          key: '开发密钥' // 必填
+  getFuzzyLocation: function(query) {
+    const that = this;
+    wx.chooseLocation({
+      success: function(res) {
+        console.log("选择的位置信息：", res);
+        that.setData({
+          latitude: res.latitude,
+          longitude: res.longitude
         });
-        //1、获取当前位置坐标
-        wx.getLocation({
-          type: 'wgs84',
-          success: function (res) {
-              that.setData({
-                  	startLatitude: res.latitude,
-                 	startLongitude: res.longitude,
-              })
-            //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
-            qqmapsdk.reverseGeocoder({
-              location: {
-	               latitude: res.latitude,
-	               longitude: res.longitude
-              },
-              success: function (addressRes) {
-                var address = addressRes.result.formatted_addresses.recommend;
-                // 位置的名字
-                that.setData({
-                    startAddress: address
-                })
-              }
-            })
+        that.updateMap(res.latitude, res.longitude);
+      },
+      fail: function(err) {
+        console.error("选择位置失败：", err);
+      }
+    });
+  },
+  updateMap: function(latitude, longitude) {
+    this.setData({
+      latitude: latitude,
+      longitude: longitude
+    });
+  },
+  handleLocation: function() {
+    wx.getLocation({
+      type: 'wgs84',
+      success: function(res) {
+        console.log("获取用户位置：", res);
+      }
+    });
+  },
+  handleAddress: function() {
+    wx.chooseLocation({
+      success: function(res) {
+        console.log("选择的位置信息：", res);
+      }
+    });
+  },
+  getAddressName: function () {
+    const that = this;
+    const qqmapsdk = new QQMapWX({
+      key: '开发密钥'
+    });
+    wx.getLocation({
+      type: 'wgs84',
+      success: function (res) {
+        that.setData({
+          startLatitude: res.latitude,
+          startLongitude: res.longitude,
+        });
+        qqmapsdk.reverseGeocoder({
+          location: {
+            latitude: res.latitude,
+            longitude: res.longitude
+          },
+          success: function (addressRes) {
+            var address = addressRes.result.formatted_addresses.recommend;
+            that.setData({
+              startAddress: address
+            });
           }
-        })
-    }
+        });
+      }
+    });
+  }
 });

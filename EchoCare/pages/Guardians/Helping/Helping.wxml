@@ -1,0 +1,16 @@
+<!--pages/Guardians/Helping/Helping.wxml-->
+<view class="container">
+    <!-- 页面标题 -->
+    <view class="header">
+        外部链接列表
+    </view>
+
+    <!-- 链接列表 -->
+    <view class="link-container">
+        <block wx:for="{{links}}" wx:key="index">
+            <button class="link-button" bindtap="openLink" data-url="{{item.url}}">
+                {{item.name}}
+            </button>
+        </block>
+    </view>
+</view>

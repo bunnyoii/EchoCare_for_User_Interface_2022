@@ -14,12 +14,16 @@
     "pages/Patients/Confirm/confirm",
     "pages/Guardians/Health Management/initialize/initialize",
     "pages/Guardians/Health Management/reminder/calendarReminder",
-    "pages/Guardians/Health Management/healthStatus/healthStatus"
+    "pages/Guardians/Health Management/healthStatus/healthStatus",
+    "pages/Guardians/Helping/Helping",
+    "pages/Guardians/Helping/webview/webview"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarBackgroundColor": "#ffffff"
+    "navigationBarTitleText": "EchoCare",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
   },
   "style": "v2",
   "componentFramework": "glass-easel",

@@ -2,7 +2,7 @@
 <view class="container">
     <view class="header">
         <text class="title">安全追踪</text>
-        <text>请选择适合Amber的安全洁净区域</text>
+        <text>请选择适合Amber的安全活动区域</text>
     </view>
     <view class="form">
         <picker mode="selector" class="picker" range="{{provinces}}" value="{{provinceIndex}}" bindchange="bindProvinceChange">
@@ -15,8 +15,8 @@
             <view class="picker-view">{{district}}</view>
         </picker>
         <view class="search-bar">
-            <input class="search-input" type="text" placeholder="小区、医院、学校等"/>
-            <button class="search-button">🔍</button>
+            <input class="search-input" type="text" placeholder="小区、医院、学校等" bindinput="onInputChange"/>
+            <button class="search-button" bindtap="onSearch">🔍</button>
         </view>
     </view>
 </view>
