@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/Initialize/HomePage/homepage",
-    "pages/Initialize/Validate/validate",
     "pages/Guardians/Initialize/Selector/selector",
     "pages/Patients/Initialize/Validate/validate",
     "pages/Guardians/Initialize/Selector/selectorConfirm",
@@ -16,7 +15,15 @@
     "pages/Guardians/Health Management/reminder/calendarReminder",
     "pages/Guardians/Health Management/healthStatus/healthStatus",
     "pages/Guardians/Helping/Helping",
-    "pages/Guardians/Helping/webview/webview"
+    "pages/Guardians/Helping/webview/webview",
+    "pages/Patients/FindThings/FindThings",
+    "pages/Patients/Important Things/importantThings",
+    "pages/Patients/Location/location",
+    "pages/Patients/Location Image/location1/location1",
+    "pages/Patients/Location Image/location2/location2",
+    "pages/Patients/Location Image/location3/location3",
+    "pages/Patients/Medicine/medicine",
+    "pages/Patients/Schedule/schedule"
   ],
   "window": {
     "navigationBarTextStyle": "black",

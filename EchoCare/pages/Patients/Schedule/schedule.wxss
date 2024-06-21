@@ -1,4 +1,4 @@
-/* pages/Guardians/Health Management/reminder/calendarReminder.wxss */
+/* pages/Patients/Schedule/schedule.wxss */
 .dot-gray {
   background: #999;
 }

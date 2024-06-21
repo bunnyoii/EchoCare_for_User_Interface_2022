@@ -1,0 +1,8 @@
+<!--pages/Patients/Important Things/importantThings.wxml-->
+<view class="title">重要</view>
+<view class="title1">提示</view>
+<view class="container">
+  <button class="btn contact-btn" bindtap="gotoContactPage">常用联系人信息</button>
+  <button class="btn medicine-btn" bindtap="gotoMedicinePage">常用药品信息</button>
+  <button class="btn item-btn" bindtap="gotoItemPage">常用物品放置信息</button>
+</view>

@@ -1,0 +1,9 @@
+/* pages/Patients/Location Image/location2/location2.wxss */
+.fullscreen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持宽高比例填充整个容器 */
+  position: fixed; /* 固定位置，覆盖整个屏幕 */
+  top: 10;
+  left: 0;
+}

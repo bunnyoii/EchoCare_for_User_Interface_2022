@@ -1,0 +1,21 @@
+<!--pages/Patients/Location/location.wxml-->
+<view class="container">
+  <view class="title">位置标记</view>
+
+  <view class="button-wrapper">
+    <button style="width: 80vw;" class="location-button" bindtap="goToHome">
+      <image src="https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/Location.png" class="button-image"></image>
+      <text class="button-text">我的家</text>
+    </button>
+    
+    <button style="width: 80vw;" class="location-button" bindtap="goToHospital">
+      <image src="https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/Location.png" class="button-image"></image>
+      <text class="button-text">常去的医院</text>
+    </button>
+    
+    <button style="width: 80vw;" class="location-button" bindtap="goToPark">
+      <image src="https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/Location.png" class="button-image"></image>
+      <text class="button-text">常去的公园</text>
+    </button>
+  </view>
+</view>

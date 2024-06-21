@@ -8,19 +8,19 @@ Page({
 
   navigateToLocation: function () {
     wx.navigateTo({
-      url: '/pages/Patients/Emergency Contact/emergencyContact'
+      url: '/pages/Patients/Location/location'
     });
   },
 
   navigateToSchedule: function () {
     wx.navigateTo({
-      url: '/pages/Patients/Emergency Contact/emergencyContact'
+      url: '/pages/Patients/Schedule/schedule'
     });
   },
 
   navigateToImportant: function () {
     wx.navigateTo({
-      url: '/pages/Patients/Emergency Contact/emergencyContact'
+      url: '/pages/Patients/Important Things/importantThings'
     });
   }
 });

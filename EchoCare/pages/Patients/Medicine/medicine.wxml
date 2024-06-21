@@ -1,0 +1,33 @@
+<!--pages/Patients/Medicine/medicine.wxml-->
+<view class="container">
+  <view class="medicine">
+    <view class="medicine-info">
+      <view class="medicine-name">名称：吡拉西坦片</view>
+      <image class="medicine-img" src="https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/med1.png"></image>
+      <view class="medicine-description">
+        用法用量：口服。每次0.8-1.6g（2-4片），每日3次，4-8周为一疗程。儿童用量减半。
+      </view>
+    </view>
+  </view>
+  
+  <view class="medicine">
+    <view class="medicine-info">
+      <view class="medicine-name">名称：盐酸多奈哌齐片</view>
+      <image class="medicine-img" src="https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/med2.png"></image>
+      <view class="medicine-description">
+        用法用量：初始治疗用量一日一次，一次5mg (以盐酸多奈呱齐计)应于晚上睡前口服，一日5mg的剂量应至少维持一个月
+      </view>
+    </view>
+  </view>
+  
+  <view class="medicine">
+    <view class="medicine-info">
+      <view class="medicine-name">名称：速效救心丸</view>
+      
+      <image class="medicine-img" src="https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/med3.png"></image>
+      <view class="medicine-description">
+        用法用量：含服，一次4—6粒，一日3次；急性发作时，一次10-15粒。
+      </view>
+    </view>
+  </view>
+</view>

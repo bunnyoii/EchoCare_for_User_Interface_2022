@@ -1,0 +1,50 @@
+/* pages/Patients/Location/location.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 设置页面高度，使页面铺满整个屏幕 */
+  background-color: #fff; /* 白色背景 */
+}
+
+.title {
+  font-size: 48px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #64a901; /* 绿色 #69a901 */
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.location-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin: 20px;
+  background-color: #fff; /* 白色按钮外景色 */
+  color: #000; /* 黑色按钮内部 */
+  border: 2px solid #000; /* 黑色边框 */
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.button-text {
+  font-size: 24px;
+}
+
+.location-button:hover {
+  background-color: #000; /* 按钮内部悬停时变为黑色 */
+  color: #fff; /* 文字变为白色 */
+}

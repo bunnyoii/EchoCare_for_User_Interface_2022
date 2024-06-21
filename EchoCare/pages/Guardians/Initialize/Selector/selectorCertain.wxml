@@ -4,8 +4,8 @@
   <text>验证成功！</text>
   <text>接下来的日子</text>
   <text>要时刻关爱{{userName}}噢！</text>
-  <image src="assets/avatar.jpg" class="avatar"/>
-  <image src="assets/hand-gesture.png" class="gesture"/>
+  <image src="https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/avatar.jpg" class="avatar"/>
+  <image src="https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/hand-gesture.png" class="gesture"/>
   <image src="{{userImage}}" class="avatar"/>
 </view>
 

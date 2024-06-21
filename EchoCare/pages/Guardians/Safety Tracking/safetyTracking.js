@@ -103,6 +103,11 @@ Page({
       }
     });
   },
+  callContact: function (e) {
+    wx.makePhoneCall({
+      phoneNumber: '18946558268',
+    });
+  },
   getAddressName: function () {
     const that = this;
     const qqmapsdk = new QQMapWX({
@@ -130,4 +135,4 @@ Page({
       }
     });
   }
-});
+})

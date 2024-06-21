@@ -6,13 +6,13 @@ Page({
    */
   data: {
     contacts: [
-      { id: '001', name: 'A.Heins', checked: false, avatar: 'assets/avatar1.jpg' },
-      { id: '002', name: 'Al', checked: false, avatar: 'assets/avatar2.jpg' },
-      { id: '003', name: 'AirSupply', checked: false, avatar: 'assets/avatar3.jpg' },
-      { id: '004', name: '爱睡懒觉_', checked: false, avatar: 'assets/avatar4.jpg' },
-      { id: '005', name: 'Alan', checked: false, avatar: 'assets/avatar5.jpg' },
-      { id: '006', name: 'Alex', checked: false, avatar: 'assets/avatar6.jpg' },
-      { id: '007', name: 'Amber', checked: false, avatar: 'assets/avatar7.jpg' }
+      { id: '001', name: 'A.Heins', checked: false, avatar: 'https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/avatar1.jpg' },
+      { id: '002', name: 'Al', checked: false, avatar: 'https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/avatar2.jpg' },
+      { id: '003', name: 'AirSupply', checked: false, avatar: 'https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/avatar3.jpg' },
+      { id: '004', name: '爱睡懒觉_', checked: false, avatar: 'https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/avatar4.jpg' },
+      { id: '005', name: 'Alan', checked: false, avatar: 'https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/avatar5.jpg' },
+      { id: '006', name: 'Alex', checked: false, avatar: 'https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/avatar6.jpg' },
+      { id: '007', name: 'Amber', checked: false, avatar: 'https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/avatar7.jpg' }
     ],
     selectedContactId: null
   },

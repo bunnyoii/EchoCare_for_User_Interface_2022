@@ -1,0 +1,39 @@
+/* pages/Patients/Medicine/medicine.wxss */
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200rpx; /* 以rpx为单位 */
+  margin: 0 auto;
+}
+
+.medicine {
+  background-color: #fff;
+  border-radius: 8rpx; /* 以rpx为单位 */
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1); /* 以rpx为单位 */
+  padding: 20rpx; /* 以rpx为单位 */
+  text-align: center;
+  font-size: 36px;
+  width: 90%; /* 定义每个药品项的宽度 */
+}
+
+.medicine-img {
+  max-width: 100%; /* 图片宽度最大100% */
+  border-radius: 8rpx; /* 图片圆角以rpx为单位 */
+  margin-bottom: 10rpx; /* 以rpx为单位的底部间距 */
+}
+
+.medicine-name {
+  font-size: 48rpx; /* 以rpx为单位的字体大小 */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx; /* 以rpx为单位的底部间距 */
+}
+
+.medicine-description {
+  font-size: 36rpx; /* 以rpx为单位的字体大小 */
+  line-height: 1.6;
+  color: #666;
+}

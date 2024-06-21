@@ -2,7 +2,7 @@
 <view class="container">
     <view class="header">
         <text class="title">安全追踪</text>
-        <text>请选择适合Amber的安全活动区域</text>
+        <text>请选择安全活动区域</text>
     </view>
     <view class="form">
         <picker mode="selector" class="picker" range="{{provinces}}" value="{{provinceIndex}}" bindchange="bindProvinceChange">
@@ -26,3 +26,5 @@
 <map latitude="{{latitude}}" longitude="{{longitude}}" scale="14" style="width: 100%; height: 300px; position: relative; left: 0rpx; top: 0rpx">
   <marker latitude="{{latitude}}" longitude="{{longitude}}" />
 </map>
+<!-- 拨打电话按钮 -->
+<button class="telephone" bindtap="callContact" data-index="{{ index }}">拨打电话</button>

@@ -1,0 +1,78 @@
+/* pages/Patients/FindThings/FindThings.wxss */
+.container {
+  
+  padding: 20rpx;
+}
+
+.item {
+  
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+.item-img {
+  
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 8rpx;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-name {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.item-description {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.delete-btn {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 5rpx;/* 调整删除按钮的尺寸 */
+  font-size: 36rpx; /* 调整删除按钮的字体大小 */
+  border-radius: 40rpx;
+  margin-left: 10rpx;
+}
+
+.add-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 20rpx;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+  margin-top: 20rpx;
+}
+
+.input {
+  width: 100%;
+  padding: 10rpx;
+  margin-bottom: 10rpx;
+  font-size: 24rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 4rpx;
+}
+
+.confirm-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 15rpx 20rpx;
+  font-size: 24rpx;
+  border-radius: 8rpx;
+  margin-top: 10rpx;
+}

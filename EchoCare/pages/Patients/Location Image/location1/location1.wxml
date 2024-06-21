@@ -1,0 +1,2 @@
+<!--pages/Patients/locationsimage/location1/location1.wxml-->
+<image src="https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/Home.png" class = "fullscreen"></image>

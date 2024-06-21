@@ -1,0 +1,26 @@
+<!-- index.wxml -->
+
+<view class="container">
+  <!-- 物品列表 -->
+  <block wx:for="{{items}}" wx:key="index">
+    <view class="item">
+      <image class="item-img" src="https://minmuslin-oss-bucket.oss-cn-shanghai.aliyuncs.com/EchoCare/icon.png"></image>
+      <view class="item-info">
+        <view class="item-name">{{item.name}}</view>
+        <view class="item-description">{{item.description}}</view>
+      </view>
+      <!-- 删除按钮 -->
+      <button style = "width: 20vw" class="delete-btn" data-index="{{index}}" bindtap="deleteItem">删除</button>
+    </view>
+  </block>
+
+  <!-- 添加物品按钮 -->
+  <button class="add-btn" bindtap="showAddItemInput">添加物品</button>
+
+  <!-- 输入框 -->
+  <view wx:if="{{showInput}}">
+    <input class="input" placeholder="物品名称" bindinput="inputName" value="{{inputNameValue}}"/>
+    <input class="input" placeholder="放置位置" bindinput="inputDescription" value="{{inputDescriptionValue}}"/>
+    <button class="confirm-btn" bindtap="addItem">确认添加</button>
+  </view>
+</view>
